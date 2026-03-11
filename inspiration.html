@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspiration — Jo Loforte</title>
+  <meta name="description" content="The four worlds that shape Jo Loforte's paintings and ceramics — Native American heritage, Mid-Century Modern design, Jingdezhen porcelain, and Barrio Logan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <style>
+
+    /* ── Inspiration Hero ── */
+    .insp-hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .insp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 60%, rgba(196, 102, 58, 0.06) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 40%, rgba(95, 165, 160, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 90%, rgba(201, 160, 67, 0.03) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .insp-hero::after {
+      content: '';
+      position: absolute;
+      inset: 2.5rem;
+      border: 1px solid rgba(196, 102, 58, 0.08);
+      pointer-events: none;
+    }
+
+    .insp-hero__eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--turquoise);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
+
+    .insp-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+
+    .insp-hero__sub {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.8;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s 0.7s forwards;
+    }
+
+    /* ── Manifesto ── */
+    .manifesto {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .manifesto__text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--text-secondary);
+    }
+
+    .manifesto__text em {
+      color: var(--cream);
+      font-style: italic;
+    }
+
+    /* ── Theme Grid ── */
+    .themes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .theme {
+      background: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Visual panel — the "image" for each theme */
+    .theme__visual {
+      flex: 0 0 260px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .theme__visual-inner {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Native American — step-and-face geometry */
+    .theme--native .theme__visual-inner {
+      background: #1f1006;
+    }
+    .theme--native .theme__visual-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 28px,
+          rgba(196, 102, 58, 0.12) 28px,
+          rgba(196, 102, 58, 0.12) 30px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 28px,
+          rgba(196, 102, 58, 0.08) 28px,
+          rgba(196, 102, 58, 0.08) 30px
+        );
+    }
+    .theme--native .theme__visual-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 40%, rgba(196, 102, 58, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 85%, rgba(107, 76, 48, 0.4) 0%, transparent 50%);
+    }
+    .theme--native .theme__glyph {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    /* Mid-Century Modern — clean geometry */
+    .theme--mcm .theme__visual-inner {
+      background: #0e1518;
+    }
+    .theme--mcm .theme__visual-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(95, 165, 160, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 60%, rgba(201, 160, 67, 0.12) 0%, transparent 45%);
+    }
+    .theme--mcm .theme__visual-inner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--turquoise), var(--ochre), var(--terracotta));
+    }
+
+    /* Jingdezhen — deep blue porcelain */
+    .theme--jingdezhen .theme__visual-inner {
+      background: #0a0e18;
+    }
+    .theme--jingdezhen .theme__visual-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 45%, rgba(65, 105, 170, 0.35) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(95, 165, 160, 0.2) 0%, transparent 40%);
+    }
+    .theme--jingdezhen .theme__visual-inner::after {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(65, 105, 170, 0.25);
+      border-radius: 50%;
+    }
+
+    /* Barrio Logan — vibrant Chicano energy */
+    .theme--barrio .theme__visual-inner {
+      background: #150d06;
+    }
+    .theme--barrio .theme__visual-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg,
+          rgba(196, 102, 58, 0.3) 0%,
+          rgba(201, 160, 67, 0.2) 25%,
+          rgba(95, 165, 160, 0.2) 50%,
+          rgba(122, 139, 111, 0.15) 75%,
+          rgba(196, 102, 58, 0.2) 100%
+        );
+    }
+    .theme--barrio .theme__visual-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 40px,
+          rgba(255,255,255,0.015) 40px,
+          rgba(255,255,255,0.015) 41px
+        );
+    }
+
+    /* SVG glyphs */
+    .theme__glyph svg {
+      width: 120px;
+      height: 120px;
+      opacity: 0.55;
+    }
+
+    /* Theme text */
+    .theme__body {
+      padding: 2.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .theme__numeral {
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .theme__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .theme--native .theme__title { color: var(--terracotta); }
+    .theme--mcm .theme__title { color: var(--turquoise); }
+    .theme--jingdezhen .theme__title { color: #7aacdc; }
+    .theme--barrio .theme__title { color: var(--ochre); }
+
+    .theme__desc {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    .theme__keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .theme__kw {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+    }
+
+    /* ── Palette ── */
+    .palette {
+      padding: 5rem 3rem;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .palette__swatches {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .swatch__color {
+      width: 80px;
+      height: 80px;
+    }
+
+    .swatch__name {
+      font-family: var(--font-body);
+      font-size: 0.55rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── Mosaic — Jo's Works ── */
+    .mosaic {
+      padding: 6rem 3rem;
+      background: var(--bg-primary);
+    }
+
+    .mosaic__grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 60px;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+
+    /* Each artwork card */
+    .mosaic__item {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-card);
+      cursor: pointer;
+    }
+
+    .mosaic__item:hover .mosaic__img {
+      transform: scale(1.05);
+    }
+
+    .mosaic__item:hover .mosaic__overlay {
+      opacity: 1;
+    }
+
+    .mosaic__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--transition-slow);
+    }
+
+    .mosaic__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,23,20,0.9) 0%, transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+    }
+
+    .mosaic__label {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    /* Layout assignments */
+    .mosaic__item:nth-child(1) { grid-column: 1 / 6;  grid-row: 1 / 7; }  /* tall left */
+    .mosaic__item:nth-child(2) { grid-column: 6 / 10; grid-row: 1 / 5; }  /* medium top mid */
+    .mosaic__item:nth-child(3) { grid-column: 10 / 13; grid-row: 1 / 5; } /* medium top right */
+    .mosaic__item:nth-child(4) { grid-column: 6 / 9;  grid-row: 5 / 8; }  /* bottom mid-left */
+    .mosaic__item:nth-child(5) { grid-column: 9 / 13; grid-row: 5 / 8; }  /* bottom mid-right */
+    .mosaic__item:nth-child(6) { grid-column: 1 / 5;  grid-row: 7 / 11; } /* lower left */
+    .mosaic__item:nth-child(7) { grid-column: 5 / 13; grid-row: 8 / 11; } /* wide bottom */
+
+    /* ── Pinterest CTA ── */
+    .pinterest-cta {
+      padding: 6rem 3rem;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .pinterest-cta__container {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .pinterest-cta__icon {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .pinterest-cta__icon svg {
+      width: 36px;
+      height: 36px;
+      fill: var(--terracotta);
+      opacity: 0.8;
+    }
+
+    .pinterest-cta__text {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+    }
+
+    .pinterest-cta__link {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      border: 1px solid var(--terracotta);
+      padding: 1rem 2.5rem;
+      transition: all var(--transition);
+    }
+
+    .pinterest-cta__link:hover {
+      background: var(--terracotta);
+      color: var(--bg-primary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .themes {
+        grid-template-columns: 1fr;
+      }
+
+      .theme {
+        min-height: auto;
+      }
+
+      .theme__visual {
+        flex: 0 0 200px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .insp-hero {
+        padding: 7rem 1.5rem 4rem;
+      }
+
+      .insp-hero::after {
+        inset: 1rem;
+      }
+
+      .manifesto {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .palette {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .swatch__color {
+        width: 56px;
+        height: 56px;
+      }
+
+      .mosaic {
+        padding: 4rem 1.25rem;
+      }
+
+      .mosaic__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+      }
+
+      .mosaic__item:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+      .mosaic__item:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+      .mosaic__item:nth-child(3) { grid-column: 1 / 2; grid-row: 2 / 3; }
+      .mosaic__item:nth-child(4) { grid-column: 2 / 3; grid-row: 2 / 3; }
+      .mosaic__item:nth-child(5) { grid-column: 1 / 2; grid-row: 3 / 4; }
+      .mosaic__item:nth-child(6) { grid-column: 2 / 3; grid-row: 3 / 4; }
+      .mosaic__item:nth-child(7) { grid-column: 1 / 3; grid-row: 4 / 5; }
+
+      .pinterest-cta {
+        padding: 4rem 1.5rem;
+      }
+
+      .theme__visual {
+        flex: 0 0 180px;
+      }
+
+      .theme__body {
+        padding: 2rem 1.5rem;
+      }
+
+      .theme__title {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mosaic__grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+      }
+
+      .mosaic__item:nth-child(n) {
+        grid-column: 1 / 2;
+        grid-row: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Jo Loforte</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#video">Video</a></li>
+      <li><a href="inspiration.html" style="color:var(--terracotta);">Inspiration</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="insp-hero">
+    <p class="insp-hero__eyebrow">The World That Shapes The Work</p>
+    <h1 class="insp-hero__title">Inspiration</h1>
+    <p class="insp-hero__sub">Four worlds — ancient and modern, indigenous and urban, East and West — converging on canvas and clay.</p>
+  </header>
+
+  <!-- Manifesto -->
+  <div class="manifesto reveal">
+    <p class="manifesto__text">
+      Jo's work doesn't begin with a blank canvas. It begins with a lifetime of accumulated worlds:
+      <em>totem poles rising from Pacific fog</em>,
+      the clean geometric optimism of <em>mid-century rooms</em>,
+      the 1,000-year weight of <em>Jingdezhen kilns</em>,
+      and the raw, unfiltered power of <em>Chicano murals</em>
+      painted beneath freeway bridges in Barrio Logan.
+      Every face Jo renders carries all four of these worlds inside it.
+    </p>
+  </div>
+
+  <!-- Four Themes -->
+  <div class="themes">
+
+    <!-- I. Native American Heritage -->
+    <div class="theme theme--native reveal">
+      <div class="theme__visual">
+        <div class="theme__visual-inner"></div>
+        <div class="theme__glyph">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Totem-inspired face glyph -->
+            <rect x="46" y="10" width="28" height="6" fill="#c4663a" opacity="0.9"/>
+            <rect x="38" y="16" width="44" height="4" fill="#c4663a" opacity="0.7"/>
+            <!-- Eyes -->
+            <rect x="44" y="28" width="10" height="8" fill="#c4663a" opacity="0.9"/>
+            <rect x="66" y="28" width="10" height="8" fill="#c4663a" opacity="0.9"/>
+            <rect x="48" y="30" width="6" height="4" fill="#1a1714"/>
+            <rect x="70" y="30" width="6" height="4" fill="#1a1714"/>
+            <!-- Nose bridge -->
+            <rect x="57" y="36" width="6" height="12" fill="#c4663a" opacity="0.5"/>
+            <!-- Mouth -->
+            <rect x="42" y="50" width="36" height="5" fill="#c4663a" opacity="0.9"/>
+            <rect x="48" y="55" width="4" height="4" fill="#1a1714"/>
+            <rect x="68" y="55" width="4" height="4" fill="#1a1714"/>
+            <!-- Chin -->
+            <rect x="46" y="60" width="28" height="5" fill="#c4663a" opacity="0.6"/>
+            <!-- Wings/arms -->
+            <rect x="20" y="28" width="24" height="4" fill="#6b4c30" opacity="0.7"/>
+            <rect x="76" y="28" width="24" height="4" fill="#6b4c30" opacity="0.7"/>
+            <rect x="16" y="24" width="8" height="12" fill="#6b4c30" opacity="0.5"/>
+            <rect x="96" y="24" width="8" height="12" fill="#6b4c30" opacity="0.5"/>
+            <!-- Base stack -->
+            <rect x="50" y="66" width="20" height="30" fill="#6b4c30" opacity="0.5"/>
+            <rect x="44" y="80" width="32" height="4" fill="#c4663a" opacity="0.4"/>
+            <rect x="40" y="92" width="40" height="4" fill="#c4663a" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+      <div class="theme__body">
+        <p class="theme__numeral">I &mdash; Origin</p>
+        <h2 class="theme__title">Native Roots</h2>
+        <p class="theme__desc">
+          Growing up in Washington State, Jo was immersed in the totem poles, ceremonial masks,
+          and organic face carvings of Pacific Northwest Native American culture. The totemic tradition
+          of stacking faces, reading meaning through form, and finding humanity in simplified
+          silhouette runs deep in everything Jo paints. These are not borrowed aesthetics &mdash;
+          they are the first visual language she ever learned.
+        </p>
+        <div class="theme__keywords">
+          <span class="theme__kw">Totem Poles</span>
+          <span class="theme__kw">Organic Form</span>
+          <span class="theme__kw">Primitive Faces</span>
+          <span class="theme__kw">Pacific Northwest</span>
+          <span class="theme__kw">Archetypal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- II. Mid-Century Modern -->
+    <div class="theme theme--mcm reveal">
+      <div class="theme__visual">
+        <div class="theme__visual-inner"></div>
+        <div class="theme__glyph">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- MCM-inspired geometric chair form -->
+            <ellipse cx="60" cy="44" rx="32" ry="20" fill="none" stroke="#5fa5a0" stroke-width="1.5" opacity="0.8"/>
+            <line x1="36" y1="52" x2="28" y2="90" stroke="#5fa5a0" stroke-width="1.5" opacity="0.7"/>
+            <line x1="84" y1="52" x2="92" y2="90" stroke="#5fa5a0" stroke-width="1.5" opacity="0.7"/>
+            <line x1="28" y1="90" x2="92" y2="90" stroke="#5fa5a0" stroke-width="1" opacity="0.5"/>
+            <!-- Organic blob -->
+            <ellipse cx="60" cy="44" rx="20" ry="12" fill="#5fa5a0" opacity="0.15"/>
+            <!-- MCM sun burst -->
+            <circle cx="88" cy="24" r="10" fill="none" stroke="#c9a043" stroke-width="1" opacity="0.6"/>
+            <circle cx="88" cy="24" r="4" fill="#c9a043" opacity="0.5"/>
+            <!-- Lines radiating -->
+            <line x1="88" y1="10" x2="88" y2="8" stroke="#c9a043" stroke-width="1" opacity="0.5"/>
+            <line x1="88" y1="38" x2="88" y2="40" stroke="#c9a043" stroke-width="1" opacity="0.5"/>
+            <line x1="74" y1="24" x2="72" y2="24" stroke="#c9a043" stroke-width="1" opacity="0.5"/>
+            <line x1="102" y1="24" x2="104" y2="24" stroke="#c9a043" stroke-width="1" opacity="0.5"/>
+            <!-- Grid dots -->
+            <circle cx="30" cy="20" r="2" fill="#c9a043" opacity="0.35"/>
+            <circle cx="20" cy="30" r="2" fill="#c9a043" opacity="0.25"/>
+            <circle cx="20" cy="20" r="1.5" fill="#5fa5a0" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+      <div class="theme__body">
+        <p class="theme__numeral">II &mdash; Form</p>
+        <h2 class="theme__title">Mid-Century Modern</h2>
+        <p class="theme__desc">
+          Jo's stepmother, an interior designer specializing in Mid-Century Modern, filled their home
+          with the clean lines, organic curves, and functional elegance of the 1950s and 60s.
+          Jonathan Adler's bold patterns. Eames silhouettes. The idea that beauty and utility
+          could coexist without ornament. This is where Jo learned to trust the power of form
+          alone &mdash; and where her signature simplicity was born.
+        </p>
+        <div class="theme__keywords">
+          <span class="theme__kw">Clean Lines</span>
+          <span class="theme__kw">Jonathan Adler</span>
+          <span class="theme__kw">Organic Curves</span>
+          <span class="theme__kw">Bold Pattern</span>
+          <span class="theme__kw">1950s &ndash; 60s</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- III. Jingdezhen -->
+    <div class="theme theme--jingdezhen reveal">
+      <div class="theme__visual">
+        <div class="theme__visual-inner"></div>
+        <div class="theme__glyph">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Porcelain vase silhouette -->
+            <path d="M50 15 Q44 20 42 30 Q38 42 38 52 Q36 60 38 70 Q42 85 42 95 L78 95 Q78 85 82 70 Q84 60 82 52 Q82 42 78 30 Q76 20 70 15 Z"
+              fill="none" stroke="#7aacdc" stroke-width="1.5" opacity="0.7"/>
+            <!-- Neck -->
+            <rect x="52" y="10" width="16" height="6" rx="3" fill="none" stroke="#7aacdc" stroke-width="1.2" opacity="0.6"/>
+            <!-- Decorative bands (blue and white style) -->
+            <path d="M42 42 Q60 38 78 42" fill="none" stroke="#7aacdc" stroke-width="1" opacity="0.5"/>
+            <path d="M40 58 Q60 54 80 58" fill="none" stroke="#7aacdc" stroke-width="1" opacity="0.5"/>
+            <path d="M40 74 Q60 70 80 74" fill="none" stroke="#7aacdc" stroke-width="1" opacity="0.4"/>
+            <!-- Floral motif center -->
+            <circle cx="60" cy="56" r="8" fill="none" stroke="#7aacdc" stroke-width="1" opacity="0.4"/>
+            <circle cx="60" cy="56" r="3" fill="#7aacdc" opacity="0.3"/>
+            <line x1="60" y1="44" x2="60" y2="48" stroke="#7aacdc" stroke-width="1" opacity="0.35"/>
+            <line x1="60" y1="64" x2="60" y2="68" stroke="#7aacdc" stroke-width="1" opacity="0.35"/>
+            <line x1="48" y1="56" x2="52" y2="56" stroke="#7aacdc" stroke-width="1" opacity="0.35"/>
+            <line x1="68" y1="56" x2="72" y2="56" stroke="#7aacdc" stroke-width="1" opacity="0.35"/>
+            <!-- Base -->
+            <rect x="40" y="93" width="40" height="3" rx="1" fill="#7aacdc" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+      <div class="theme__body">
+        <p class="theme__numeral">III &mdash; Clay</p>
+        <h2 class="theme__title">Jingdezhen</h2>
+        <p class="theme__desc">
+          Drawn to clay as a medium of raw honesty, Jo traveled to Jingdezhen, China &mdash;
+          the porcelain capital of the world for over a millennium. The ancient tradition of
+          blue-and-white ware, the tactile memory embedded in fired clay, the way a vessel
+          can hold both utility and soul &mdash; all of this shaped Jo's approach to ceramics.
+          At the 2024 Taoxichuan Spring Art Fair, her work sold out on the first day.
+        </p>
+        <div class="theme__keywords">
+          <span class="theme__kw">Blue &amp; White</span>
+          <span class="theme__kw">Porcelain</span>
+          <span class="theme__kw">Kiln-Fired</span>
+          <span class="theme__kw">Ancient Tradition</span>
+          <span class="theme__kw">Vessel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- IV. Barrio Logan -->
+    <div class="theme theme--barrio reveal">
+      <div class="theme__visual">
+        <div class="theme__visual-inner"></div>
+        <div class="theme__glyph">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Abstract mural geometry -->
+            <!-- Bridge pillar -->
+            <rect x="54" y="10" width="12" height="80" fill="#c9a043" opacity="0.2"/>
+            <!-- Bold face / sun -->
+            <circle cx="60" cy="38" r="18" fill="none" stroke="#c9a043" stroke-width="2" opacity="0.7"/>
+            <circle cx="60" cy="38" r="10" fill="#c9a043" opacity="0.25"/>
+            <!-- Rays -->
+            <line x1="60" y1="16" x2="60" y2="12" stroke="#c9a043" stroke-width="2" opacity="0.6"/>
+            <line x1="60" y1="60" x2="60" y2="64" stroke="#c9a043" stroke-width="2" opacity="0.6"/>
+            <line x1="38" y1="38" x2="34" y2="38" stroke="#c9a043" stroke-width="2" opacity="0.6"/>
+            <line x1="82" y1="38" x2="86" y2="38" stroke="#c9a043" stroke-width="2" opacity="0.6"/>
+            <line x1="44" y1="22" x2="41" y2="19" stroke="#c9a043" stroke-width="2" opacity="0.4"/>
+            <line x1="76" y1="54" x2="79" y2="57" stroke="#c9a043" stroke-width="2" opacity="0.4"/>
+            <!-- Color band stripes -->
+            <rect x="20" y="75" width="80" height="5" fill="#c4663a" opacity="0.4"/>
+            <rect x="20" y="82" width="80" height="4" fill="#5fa5a0" opacity="0.4"/>
+            <rect x="20" y="88" width="80" height="3" fill="#c9a043" opacity="0.35"/>
+            <!-- Eagle wing shapes -->
+            <path d="M20 55 L40 48 L36 62 Z" fill="#c4663a" opacity="0.3"/>
+            <path d="M100 55 L80 48 L84 62 Z" fill="#c4663a" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+      <div class="theme__body">
+        <p class="theme__numeral">IV &mdash; Place</p>
+        <h2 class="theme__title">Barrio Logan</h2>
+        <p class="theme__desc">
+          Jo lives and creates in Barrio Logan, San Diego &mdash; one of California's official
+          Cultural Districts and home to the largest concentration of Chicano murals in the world.
+          Chicano Park's massive painted pillars, the fearless street-level creativity, the collision
+          of political urgency and artistic beauty &mdash; this neighborhood's visual fearlessness
+          has become another irreplaceable layer in Jo's ever-evolving practice.
+        </p>
+        <div class="theme__keywords">
+          <span class="theme__kw">Chicano Murals</span>
+          <span class="theme__kw">San Diego</span>
+          <span class="theme__kw">Street Art</span>
+          <span class="theme__kw">Bold Color</span>
+          <span class="theme__kw">Cultural District</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /themes -->
+
+  <!-- Palette -->
+  <section class="palette reveal">
+    <div class="section-header">
+      <h2 class="section-title">The Palette</h2>
+      <p class="section-subtitle">Colors drawn from earth, sky, fire &amp; clay</p>
+    </div>
+    <div class="palette__swatches">
+      <div class="swatch">
+        <div class="swatch__color" style="background:#c4663a;"></div>
+        <span class="swatch__name">Terracotta</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#d4823e;"></div>
+        <span class="swatch__name">Burnt Orange</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#c9a043;"></div>
+        <span class="swatch__name">Ochre</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#5fa5a0;"></div>
+        <span class="swatch__name">Turquoise</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#7aacdc;"></div>
+        <span class="swatch__name">Porcelain Blue</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#7a8b6f;"></div>
+        <span class="swatch__name">Sage</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#6b4c30;"></div>
+        <span class="swatch__name">Teak</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#1a1714;"></div>
+        <span class="swatch__name">Obsidian</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background:#f4efe7; border: 1px solid rgba(255,255,255,0.08);"></div>
+        <span class="swatch__name">Cream</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mosaic: Jo's Works -->
+  <section class="mosaic" id="works">
+    <div class="section-header reveal">
+      <h2 class="section-title">The Synthesis</h2>
+      <p class="section-subtitle">Where all four worlds meet — the collection</p>
+    </div>
+    <div class="mosaic__grid reveal">
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/1.png" alt="The Deep" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">The Deep</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/2.png" alt="Emergence" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">Emergence</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/3.png" alt="The Encounter" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">The Encounter</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/4.png" alt="Gathering" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">Gathering</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/5.png" alt="The Elder" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">The Elder</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/6.png" alt="Nocturne" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">Nocturne</span></div>
+      </div>
+      <div class="mosaic__item">
+        <img class="mosaic__img" src="images/7.png" alt="Silent Dialogue" loading="lazy">
+        <div class="mosaic__overlay"><span class="mosaic__label">Silent Dialogue</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pinterest CTA -->
+  <section class="pinterest-cta reveal">
+    <div class="pinterest-cta__container">
+      <div class="pinterest-cta__icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+        </svg>
+      </div>
+      <p class="pinterest-cta__text">
+        Follow Jo's ongoing collection of visual inspirations &mdash; Mid-Century Modern interiors,
+        textiles, ceramics, indigenous art, and the color-soaked world that feeds her practice.
+      </p>
+      <a href="https://www.pinterest.com/jloforte/" class="pinterest-cta__link" target="_blank" rel="noopener">
+        Follow on Pinterest
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Jo Loforte. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Nav scroll behavior (same as index.html)
+    const nav = document.getElementById('nav');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
