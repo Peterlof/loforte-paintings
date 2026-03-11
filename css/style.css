@@ -823,6 +823,10 @@ a {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
   .nav {
     padding: 1.25rem 1.5rem;
   }
