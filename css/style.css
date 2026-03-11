@@ -895,6 +895,87 @@ a {
   .lightbox__next {
     font-size: 2rem;
   }
+
+  /* --- Mobile font size bumps --- */
+  .hero__tagline {
+    font-size: 0.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero__descriptor {
+    font-size: 0.8rem;
+  }
+
+  .hero__cta {
+    font-size: 0.8rem;
+  }
+
+  .hero__scroll-indicator span {
+    font-size: 0.75rem;
+  }
+
+  .nav__links a {
+    font-size: 0.85rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+  }
+
+  .gallery__item-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .gallery__item-info p {
+    font-size: 0.85rem;
+  }
+
+  .gallery__item-badge {
+    font-size: 0.7rem;
+  }
+
+  .about__role {
+    font-size: 0.75rem;
+  }
+
+  .about__portrait-caption {
+    font-size: 0.9rem;
+  }
+
+  .about__quote {
+    font-size: 1.2rem;
+  }
+
+  .about__bio {
+    font-size: 1.05rem;
+  }
+
+  .contact__text {
+    font-size: 1.05rem;
+  }
+
+  .contact__email {
+    font-size: 1.1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+
+  .lightbox__title {
+    font-size: 1.1rem;
+  }
+
+  .lightbox__details {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
