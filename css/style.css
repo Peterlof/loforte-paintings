@@ -824,7 +824,7 @@ a {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .nav {
