@@ -872,6 +872,11 @@ a {
     inset: 1rem;
   }
 
+  .hero__title {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+    letter-spacing: 0.05em;
+  }
+
   .gallery {
     padding: 4rem 1.25rem;
   }
