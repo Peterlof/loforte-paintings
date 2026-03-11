@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:onedrive.live.com)",
+      "Bash(cd \"D:/jojo\" && npx -y serve . -l 3000 2>&1)",
+      "Bash(git --version && gh auth status 2>&1)"
+    ]
+  }
+}

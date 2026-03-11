@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jo Loforte — Painter & Ceramic Artist</title>
+  <meta name="description" content="Original paintings and ceramics by Jo Loforte. Native American heritage meets Mid-Century Modern design and Jingdezhen porcelain. Explore the collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">Jo Loforte</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__tagline">Painter &middot; Ceramic Artist &middot; Cultural Ambassador</p>
+      <h1 class="hero__title">Jo Loforte</h1>
+      <p class="hero__subtitle">Native American spirit. Mid-century form. Raw emotion on canvas.</p>
+      <p class="hero__descriptor">
+        Original paintings
+        <span class="dot dot--terra"></span>
+        Native American motifs
+        <span class="dot dot--turq"></span>
+        Jingdezhen ceramics
+      </p>
+      <a href="#gallery" class="hero__cta">View Collection</a>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <h2 class="section-title">The Collection</h2>
+      <p class="section-subtitle">Select a piece to view in detail</p>
+    </div>
+
+    <div class="gallery__filters">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+    </div>
+
+    <div class="gallery__grid" id="galleryGrid">
+      <!-- Gallery items injected by JS -->
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="video" id="video">
+    <div class="video__container">
+      <div class="section-header">
+        <h2 class="section-title">Live from Jingdezhen</h2>
+        <p class="section-subtitle">Jo's art &amp; ceramics at the Taoxichuan Art Fair, China</p>
+      </div>
+      <div class="video__wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/V0qqhc-l4PM"
+          title="Jo Loforte — Live from Jingdezhen, China"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <div class="section-header">
+        <h2 class="section-title">About the Artist</h2>
+        <p class="section-subtitle">From Washington State to the porcelain capital of the world</p>
+      </div>
+
+      <div class="about__portrait">
+        <img src="images/jo-portrait.png" alt="Jo Loforte in Jingdezhen, China">
+        <span class="about__portrait-caption">Jo in Jingdezhen, China</span>
+      </div>
+
+      <div class="about__roles">
+        <span class="about__role">Painter</span>
+        <span class="about__role">Ceramic Artist</span>
+        <span class="about__role">Cultural Ambassador</span>
+      </div>
+
+      <blockquote class="about__quote">
+        &ldquo;I grew up surrounded by Native American totem poles and organic
+        carvings. My stepmother specializes in Mid-Century Modern. The combination
+        of those two really bleeds through in how I express faces and styles.&rdquo;
+      </blockquote>
+
+      <p class="about__bio">
+        Jo Loforte grew up in a small town in Washington State, surrounded by the
+        <span class="about__highlight">organic carvings, primitive face styles, and totem
+        poles of Native American art and culture</span>. Her stepmother, an interior
+        designer specializing in Mid-Century Modern, brought a second formative
+        influence &mdash; the clean lines and functional elegance of the 1950s and 60s.
+      </p>
+      <p class="about__bio">
+        The collision of those two worlds &mdash;
+        <span class="about__highlight">the raw, totemic power of indigenous art and the
+        sleek minimalism of mid-century design</span> &mdash; bleeds through everything
+        Jo creates. Her paintings and ceramics are populated by archetypal faces,
+        watchful eyes, and bold silhouettes that carry real emotional weight. Rich
+        color fields of deep blue, burnt orange, and stark monochrome become stages
+        where silent figures gather, converse, and observe.
+      </p>
+      <p class="about__bio">
+        Drawn to clay as a medium of raw honesty, Jo brought her talents to
+        Jingdezhen, China &mdash; the world's most historic porcelain capital. At the
+        2024 Taoxichuan Spring Art Fair, her work sold out on the first day, resonating
+        with collectors and visitors from around the world.
+      </p>
+      <p class="about__bio">
+        By merging the earthy, handcrafted spirit of Native American art with the
+        refined materials and firing techniques of traditional Chinese porcelain, Jo
+        embodies a spirit of global exchange &mdash; proving that clay and canvas are
+        universal languages.
+      </p>
+      <p class="about__bio">
+        All works are original, one-of-a-kind pieces. Commissions are welcomed.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact__container">
+      <div class="section-header">
+        <h2 class="section-title">Inquiries</h2>
+        <p class="section-subtitle">Acquisitions, commissions &amp; collaborations</p>
+      </div>
+      <p class="contact__text">
+        Interested in acquiring a piece, commissioning a work, or exploring a collaboration?
+      </p>
+      <a href="mailto:info@loforepaintings.com" class="contact__email">info@loforepaintings.com</a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Next">&rsaquo;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="">
+      <div class="lightbox__info" id="lightboxInfo">
+        <h3 class="lightbox__title"></h3>
+        <p class="lightbox__details"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Jo Loforte. All rights reserved.</p>
+  </footer>
+
+  <script src="js/artwork.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
