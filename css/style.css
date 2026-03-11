@@ -898,83 +898,88 @@ a {
 
   /* --- Mobile font size bumps --- */
   .hero__tagline {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .hero__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .hero__descriptor {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .hero__cta {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 1.1rem 2.5rem;
   }
 
   .hero__scroll-indicator span {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .nav__links a {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 
   .section-subtitle {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .filter-btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .gallery__item-info h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .gallery__item-info p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .gallery__item-badge {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
 
   .about__role {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .about__portrait-caption {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .about__quote {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .about__bio {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .contact__text {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .contact__email {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .footer p {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 
   .lightbox__title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .lightbox__details {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
