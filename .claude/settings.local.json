@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:onedrive.live.com)",
       "Bash(cd \"D:/jojo\" && npx -y serve . -l 3000 2>&1)",
-      "Bash(git --version && gh auth status 2>&1)"
+      "Bash(git --version && gh auth status 2>&1)",
+      "Bash(cd \"D:/jojo\" && gh repo create loforte-paintings --public --source=. --push --description \"Jo Loforte — Painter & Ceramic Artist | Gallery Website\")",
+      "Bash(cd \"D:/jojo\" && gh api repos/Peterlof/loforte-paintings/pages -X POST -f \"source[branch]=master\" -f \"source[path]=/\" 2>&1)"
     ]
   }
 }
