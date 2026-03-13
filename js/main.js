@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     item.innerHTML = `
       <div class="gallery__item-img-wrap">
-        <img data-src="${piece.image}" alt="${piece.title}" loading="lazy">
+        <img data-src="${piece.thumb}" alt="${piece.title}" loading="lazy">
         <div class="gallery__item-overlay">
           <div class="gallery__item-info">
             <h3>${piece.title}</h3>

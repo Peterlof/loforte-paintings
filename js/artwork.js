@@ -9,7 +9,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/1.png",
+    thumb: "images/thumbs/1.webp",
+    image: "images/full/1.webp",
     category: "all",
     available: true,
     price: ""
@@ -20,7 +21,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/2.png",
+    thumb: "images/thumbs/2.webp",
+    image: "images/full/2.webp",
     category: "all",
     available: true,
     price: ""
@@ -31,7 +33,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/3.png",
+    thumb: "images/thumbs/3.webp",
+    image: "images/full/3.webp",
     category: "all",
     available: true,
     price: ""
@@ -42,7 +45,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/4.png",
+    thumb: "images/thumbs/4.webp",
+    image: "images/full/4.webp",
     category: "all",
     available: true,
     price: ""
@@ -53,7 +57,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/5.png",
+    thumb: "images/thumbs/5.webp",
+    image: "images/full/5.webp",
     category: "all",
     available: true,
     price: ""
@@ -64,7 +69,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/6.png",
+    thumb: "images/thumbs/6.webp",
+    image: "images/full/6.webp",
     category: "all",
     available: true,
     price: ""
@@ -75,7 +81,8 @@ const ARTWORK = [
     medium: "Acrylic on canvas",
     dimensions: "",
     year: "",
-    image: "images/7.png",
+    thumb: "images/thumbs/7.webp",
+    image: "images/full/7.webp",
     category: "all",
     available: true,
     price: ""
